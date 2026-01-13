@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from login import views
+from .views import login_view
 
 urlpatterns = [
-    path('',views.index, name="index"),
+    path("login/", login_view, name="login"),
 ]
