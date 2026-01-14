@@ -4,11 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 from django.conf import settings
 from django.utils import timezone
 from datetime import timedelta
-
-
-class login(models.Model):
-    email= models.EmailField(max_length=122)
-    password= models.CharField( max_length=122)
+from rest_framework import serializers
  
 # ---------------- USER MANAGER ----------------
 class UserManager(BaseUserManager):
@@ -76,4 +72,3 @@ class OTP(models.Model):
 
     def __str__(self):
         return f"{self.user.email} - {self.otp}"
-

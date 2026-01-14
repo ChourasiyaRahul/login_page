@@ -2,3 +2,4 @@ venv
 login/migrations
 .env
 login/__pycache__
+core/__pycache__
